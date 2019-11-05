@@ -1,0 +1,29 @@
+html {
+	text-align: center;
+	background: #1F2833;
+	font-family: 'Lobster', cursive;
+}
+
+h1 {
+	color: #66FCF1;
+	font-size: 50px;
+}
+
+span {
+	color: #C5C6C7;
+	font-size: 60px;
+	font-style: bold;
+}
+
+img {
+	width: 400px;
+	height: 400px;
+	border: 10px solid white;
+	border-radius: 220px;
+
+}
+
+#MyClockDisplay {
+	color: #45A29E;
+	font-size: 40px;
+}
