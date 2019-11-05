@@ -1,33 +1,22 @@
+function showTime(){
+  var date = new Date();
+  var y = date.getUTCFullYear() - 2001;
+  var mt = date.getUTCMonth()-5;
+  var d = date.getUTCDate();
+  var h = date.getHours();
+  var m = date.getMinutes();
+  var s = date.getSeconds();
+
+  var time = y+" years "+mt+" months "+d+" days "+h+" hours "+m+" minutes "+s+" seconds";
+
+  document.getElementById("MyClockDisplay").innerText = time;
+  document.getElementById("MyClockDisplay").textContent = time;
+}
+
+setInterval(showTime, 1000);
+
 document.querySelector('html').onclick = function() {
 var myImage = document.querySelector('img');
 
-myImage.onclick = function() {
-    var mySrc = myImage.getAttribute('src');
-    if(mySrc === 'images/firefox-icon.png') {
-      myImage.setAttribute ('src','images/firefox2.png');
-    } else {
-      myImage.setAttribute ('src','images/firefox-icon.png');
-    }
-}
-}
 
-var myButton = document.querySelector('button');
-var myHeading = document.querySelector('h1');
-
-myButton.onclick = function() {
-  setUserName();
 }
-
-function setUserName() {
-  var myName = prompt('Please enter your name.');
-  localStorage.setItem('name', myName);
-  myHeading.textContent = 'Mozilla is cool, ' + myName;
-}
-
-if(!localStorage.getItem('name')) {
-  setUserName();
-} else {
-  var storedName = localStorage.getItem('name');
-  myHeading.textContent = 'Mozilla is cool, ' + storedName;
-}
-
