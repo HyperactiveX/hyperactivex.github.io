@@ -1,22 +1,13 @@
-function showTime(){
-  var date = new Date();
-  var y = date.getUTCFullYear() - 2001;
-  var mt = date.getUTCMonth()-5;
-  var d = date.getUTCDate();
-  var h = date.getHours();
-  var m = date.getMinutes();
-  var s = date.getSeconds();
-
-  var time = y+" years "+mt+" months "+d+" days "+h+" hours "+m+" minutes "+s+" seconds";
-
-  document.getElementById("MyClockDisplay").innerText = time;
-  document.getElementById("MyClockDisplay").textContent = time;
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "300px";
+  document.getElementById("main").style.marginLeft = "300px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 
-setInterval(showTime, 1000);
-
-document.querySelector('html').onclick = function() {
-var myImage = document.querySelector('img');
-
-
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  document.body.style.backgroundColor = "white";
 }

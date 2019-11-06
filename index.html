@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Hyperactive's Page</title>
 	<link href="styles/style.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
 </head>
 <body>
-	<h1>Welcome to my Homepage!</h1>
 	<script src="scripts/main.js"></script>
-	<img src="images/mypf.jpg" alt="My profile picture">
-	<p></p>
-	<span><strong>I have successfully wasted <div id="MyClockDisplay"></div> of my life!</strong></span>
+	<div id="mySidenav" class="sidenav">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <a href="https://hyperactivex.github.io">Home</a>
+	  <a href="https://theuselessweb.com/">Random Stuffs</a>
+	  <a href="#Unknown">Unknown</a>
+	  <a href="#Unknown">Unknown</a>
+	</div>
+
+	<span onclick="openNav()">☰</span>
+
+	<h1>Welcome to my Homepage!</h1>
+	<p align="middle">
+		<img src="images/mypf.jpg" alt="My profile picture" id = "Profile" width = "400px" height = "400px">
+	</p>	
+	<p id = "quote" align = "center">
+		Smooth sea never made a skilled sailor.
+	</p>
+	
 </body>
 </html>
