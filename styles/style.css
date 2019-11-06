@@ -40,6 +40,33 @@ p#quote {
 
 }
 
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.text{
+  position: relative;
+}
+
+.text:after{
+  content: '';
+  position: absolute;
+  width: 0; height: 3px;
+  display: block;
+  margin-top: -4px;
+  right: 0;
+  background: #fff;
+  transition: width .2s ease;
+  -webkit-transition: width .2s ease;
+}
+ 
+.text:hover:after{
+  width: 100%;
+  left: 0;
+  background: #fff;
+}
+
 /* The side navigation menu */
 .sidenav {
   height: 100%; /* 100% Full-height */
@@ -49,7 +76,8 @@ p#quote {
   top: 0; /* Stay at the top */
   left: 0;
   text-align: left;
-  background-color: #111; /* Black*/
+  background-color: #0B0C10; /* Black*/
+  opacity: 0.6;
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
