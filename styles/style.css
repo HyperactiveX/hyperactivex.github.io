@@ -1,6 +1,8 @@
 html {
 	background: #1F2833;
 	color: #66FCF1;
+	margin-left: auto;
+	margin-right: auto;
 	font-family: 'Shadows Into Light', cursive;
 }
 
@@ -30,11 +32,11 @@ img#Profile {
 
 p#quote {
 	border: 10px solid #FFBF00;
-	margin-left: auto;
-	margin-right: auto;
 	width: 700px;
 	font-size: 40px;
 	border-style: outset;
+	margin-left: auto;
+	margin-right: auto;
 
 }
 
