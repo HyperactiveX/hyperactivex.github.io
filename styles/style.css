@@ -1,25 +1,34 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing;: border-box
+}
+
 html {
 	background: #1F2833;
 	color: #66FCF1;
 	margin-left: auto;
 	margin-right: auto;
+	width: 100vw;
+	height: 100vh;
 	font-family: 'Shadows Into Light', cursive;
 }
+
 
 h1 {
 	text-align: center;
 	margin-top: 0;
-	font-size: 50px;
+	font-size: 10vw;
 }
 
 h1:hover {
-	font-size: 60px;
+	font-size: 11vw;
 	text-decoration: underline;
 	transition: 0.4s;
 }
 
 span {
-	font-size: 40px;
+	font-size: 10vw;
 	font-color: #C5C6C7;
 }
 
@@ -29,18 +38,25 @@ div {
 	font-style: bold;
 }
 
+.pf {
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
 img#Profile {
-	width: 400px;
-	height: 400px;
+	width: 40vw;
+	height: auto;
 	border: 10px solid #48A684;
 	border-radius: 400px;
-
 }
 
 p#quote {
-	border: 10px solid #FFBF00;
-	width: 700px;
-	font-size: 40px;
+	border: 5px solid #FFBF00;
+	width: 90vw;
+	font-size: 8vw;
 	border-style: outset;
 	margin-left: auto;
 	margin-right: auto;
