@@ -1,31 +1,44 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Hyperactive's Page</title>
-	<link href="styles/style.css" rel="stylesheet">
-	<link href="styles/sidenav.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-</head>
-<body>
-	<script src="scripts/main.js"></script>
-	<div id="mySidenav" class="sidenav">
-	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-	  <a href="https://hyperactivex.github.io">Home</a>
-	  <a href="https://theuselessweb.com/">Random Stuffs</a>
-	  <a href="#Unknown">Unknown</a>
-	  <a href="#Unknown">Unknown</a>
-	</div>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Count Down</title>
+		<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,500;1,400&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="styles/style.css">
+		<link rel="stylesheet" href="styles/flipclock.css">
+	</head>
+	<body>
+		<div class="header">Count Down</div>
+		 
+		<div class="clock"></div>
 
-	<span onclick="openNav()">☰</span>
+		<script src="scripts/main.js"></script>
+		<script src="https://code.jquery.com/jquery-3.5.1.js"
+				integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+				crossorigin="anonymous"></script>
+		<script src="scripts/flipclock.js"></script>
+		
+		<script type="text/javascript">
+			var clock;
 
-	<h1>Welcome to my Homepage!</h1>
-	<center>
-	<img class="animation" src="images/mypf.jpg" alt="My profile picture" id = "Profile" width = "400px" height = "400px">
-</center>
-	<p id = "quote" class="text" align = "center">
-		<a>Smooth sea never made a skilled sailor.<a>
-	</p>
-	
-</body>
+			$(document).ready(function() {
+
+				// Grab the current date
+				var currentDate = new Date();
+
+				// Set some date in the future. In this case, it's always Jan 1
+				var futureDate  = new Date("2020-06-29T18:00:00Z");
+
+				// Calculate the difference in seconds between the future and current date
+				var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+				// Instantiate a coutdown FlipClock
+				clock = $('.clock').FlipClock(diff, {
+					clockFace: 'DailyCounter',
+					countdown: true
+				});
+			});
+		</script>
+	</body>
 </html>

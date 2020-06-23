@@ -1,90 +1,44 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
 html {
-	background: #1F2833;
-	color: #66FCF1;
-	margin-left: auto;
-	margin-right: auto;
-	font-family: 'Shadows Into Light', cursive;
+	background: #222;
+	color: #eeeeee;
+	width: 100vw;
+	height: 100vh;
+	font-family: 'Zilla Slab', serif;
 }
 
-h1 {
+
+.header {
+	padding-top: 2rem;
 	text-align: center;
-	margin-top: 0;
-	font-size: 50px;
+	font-size: 10vw;
+	margin-bottom: 30px;
 }
 
-h1:hover {
-	font-size: 60px;
-	text-decoration: underline;
-	transition: 0.4s;
-}
-
-span {
-	font-size: 40px;
-	font-color: #C5C6C7;
-}
-
-div {
+.clock {
+	display: flex;
+	width: 90vw; 
 	text-align: center;
-	font-size: 60px;
-	font-style: bold;
+	justify-content: center;
+	padding-top: 50px;
+	color: #eeeeee;
 }
 
-img#Profile {
-	width: 400px;
-	height: 400px;
-	border: 10px solid #48A684;
-	border-radius: 400px;
-
+.flip-clock-divider {
+	font-size: 3vw;
+	display: flex;
+	width: 100vw;
+	text-align: center;
+	justify-content: space-between;
 }
 
-p#quote {
-	border: 10px solid #FFBF00;
-	width: 700px;
-	font-size: 40px;
-	border-style: outset;
-	margin-left: auto;
-	margin-right: auto;
-
-}
-
-a{
-  text-decoration: none;
-  color: #fff;
-}
-
-.text{
-  position: relative;
-}
-
-.text:after{
-  content: '';
-  position: absolute;
-  width: 0; height: 3px;
-  display: block;
-  margin-top: -4px;
-  right: 0;
-  background: #fff;
-  transition: width .2s ease;
-  -webkit-transition: width .2s ease;
-}
- 
-.text:hover:after{
-  width: 100%;
-  left: 0;
-  background: #fff;
-}
-
-
-.animation{
-	padding: 10px;
-	transition: 0.4s;
-
-}
-.animation:hover {
-	padding: 30px;
-	transition: 0.4S;
-
-
+.flip-clock-dot {
+	color: #eeeeee;
 }
 
 
