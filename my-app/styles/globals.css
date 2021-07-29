@@ -1,9 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet:wght@100;200;300;400;500&display=swap");
+:root {
+  --greenPrimary: lightgreen;
+  --blackPrimaryFont: #353535;
+  --backgroundPrimary: #353535;
+  --backgroundSecondary: #e3e2de;
+  --hoverColor: #d2d7df;
+  --snowWhite: #fffbff;
+  --whiteSeconday: #fcfcfc;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Hahmlet", serif;
+  background-color: #e3e2de;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
 }
 
 a {

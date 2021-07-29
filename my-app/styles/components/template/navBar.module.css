@@ -1,0 +1,40 @@
+.navContainer {
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  position: static;
+  justify-content: space-between;
+  background-color: var(--backgroundPrimary);
+}
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+.navItems {
+  color: var(--snowWhite);
+}
+.title {
+  margin: 0 1rem;
+  font-weight: 500;
+  color: var(--snowWhite);
+}
+
+.menuContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-right: 1rem;
+}
+.menuItems {
+  height: 70%;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  display: inherit;
+  align-items: center;
+}
+.menuItems:hover {
+  color: var(--hoverColor);
+}
+
+@media only screen and (max-width: 710px) {
+}
