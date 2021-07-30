@@ -4,19 +4,16 @@
   display: flex;
   position: static;
   justify-content: space-between;
-  background-color: var(--backgroundPrimary);
+  background-color: transparent;
 }
 .logoContainer {
   display: flex;
   align-items: center;
 }
-.navItems {
-  color: var(--snowWhite);
-}
+
 .title {
   margin: 0 1rem;
   font-weight: 500;
-  color: var(--snowWhite);
 }
 
 .menuContainer {
@@ -32,8 +29,9 @@
   display: inherit;
   align-items: center;
 }
-.menuItems:hover {
-  color: var(--hoverColor);
+.menuItems:hover,
+.title:hover {
+  color: var(--greenPrimary);
 }
 
 @media only screen and (max-width: 710px) {
