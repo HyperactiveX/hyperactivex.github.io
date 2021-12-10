@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+:root {
+    --greenPrimary: #77D799;
+    --whiteFontColor: #FFFFFF;
+    --blackFontColor: #010E11;
+    --backgroundPrimary: #010E11;
+    --screenHeight: calc(100vh - 128px);
+    --gradientGreen: linear-gradient(90deg, rgba(84, 210, 89, 1) 0%, rgba(78, 214, 188, 1) 20%, rgba(77, 216, 201, 1) 40%, rgba(129, 232, 203, 1) 60%, rgba(115, 211, 187, 1) 80%, rgba(44, 154, 128, 1) 100%);
+    /* #e3e2de */
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Dosis', sans-serif;
+    color: var(--whiteFontColor);
+    background-color: var(--backgroundPrimary);
+    letter-spacing: 2px;
+    /* font-family: "Hahmlet", serif; */
+    /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
