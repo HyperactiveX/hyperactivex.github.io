@@ -11,8 +11,6 @@ on:
 
 jobs:
   build:
-    env:
-        NEXT_PUBLIC_BASE_PATH: '/'
     runs-on: ubuntu-latest
 
     strategy:
