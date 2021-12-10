@@ -4,12 +4,8 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
-        "build": [
-            { "src": "package.json", "use": "@now/next" },
-            { "src": "static/styles/", "use": "@now/static" }
-        ],
-        "start": "next start",
-        "export": "next build && next export"
+        "build": "next build && next export",
+        "start": "next start"
     },
     "dependencies": {
         "next": "^11.1.3",
