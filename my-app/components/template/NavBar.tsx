@@ -1,7 +1,11 @@
 import Link from "next/link";
 import styles from "../../styles/components/template/navBar.module.css";
+import { Fragment, useState } from "react";
+import { useRouter } from 'next/router'
 
 const NavBar = () => {
+  const router = useRouter()
+  const [isActive, setActive] = useState(false)
   const navContent = [
     {
       title: "Home",
@@ -25,7 +29,21 @@ const NavBar = () => {
     },
   ];
 
+  const redirectLink = (route:string) => {
+    router.push(route)
+  }
+
+  const openSideNav = (status:boolean) => {
+    setActive(status)
+    if (status) {
+      document.getElementById("sideNav")!.style.top = '0%'
+    } else {
+      document.getElementById("sideNav")!.style.top = '-50%'
+    }
+  }
+
   return (
+    <Fragment>
     <div className={styles.navContainer}>
       <div className={styles.logoContainer}>
         <Link href="/">
@@ -39,17 +57,26 @@ const NavBar = () => {
       <div className={styles.menuContainer}>
         {navContent.map((element, key) => {
           return (
-            <Link href={element.path} key={key}>
-              <a href={element.path}>
-                <div className={`${styles.menuItems} ${styles.navItems}`}>
-                  {element.title}
-                </div>
-              </a>
-            </Link>
+            <div className={`${styles.menuItems} ${styles.navItems}`} onClick={() => redirectLink(element.path)} key={key}>
+              {element.title}
+            </div>
           );
         })}
       </div>
+      <div className={styles.hamburgerSideNav}>
+        <img className={styles.hamburgerIcon} src="/images/navBar/hamburger.svg" onClick={() => openSideNav(!isActive)}/>
+      </div>
     </div>
+    <div className={styles.sideNav} id="sideNav">
+      {navContent.map((element, key) => {
+        return (
+          <div className={`${styles.menuItems} ${styles.navItems}`} onClick={() => redirectLink(element.path)} key={key}>
+            {element.title}
+          </div>
+        );
+      })}
+    </div>
+  </Fragment>
   );
 };
 

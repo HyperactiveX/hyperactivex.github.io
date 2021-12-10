@@ -1,13 +1,14 @@
 .page {
-  height: fit-content;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    height: fit-content;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
 .content {
-  height: fit-content;
-  min-height: calc(100vh - 128px);
-  overflow: auto;
-  border: none;
+    height: fit-content;
+    min-height: calc(100vh - 128px);
+    overflow: auto;
+    border: none;
 }
