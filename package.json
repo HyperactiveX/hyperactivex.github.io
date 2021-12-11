@@ -6,7 +6,7 @@
         "build": "next build",
         "start": "next start",
         "export": "npm run build && next export && touch out/.nojekyll"
-    },
+        "start": "next start"
     "dependencies": {
         "next": "^11.1.3",
         "react": "17.0.2",
