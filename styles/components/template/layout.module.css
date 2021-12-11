@@ -8,7 +8,8 @@
 
 .content {
     height: fit-content;
-    min-height: calc(100vh - 128px);
+    min-width: 100vw;
+    min-height: 100%;
     overflow: auto;
     border: none;
 }
