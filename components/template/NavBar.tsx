@@ -3,7 +3,7 @@ import styles from "../../styles/components/template/navBar.module.css";
 import { Fragment, useState } from "react";
 import { useRouter } from 'next/router'
 
-const NavBar = () => {
+const NavBar = (props:any) => {
   const router = useRouter()
   const [isActive, setActive] = useState(false)
   const navContent = [
@@ -57,7 +57,7 @@ const NavBar = () => {
       <div className={styles.menuContainer}>
         {navContent.map((element, key) => {
           return (
-            <div className={`${styles.menuItems} ${styles.navItems}`} onClick={() => redirectLink(element.path)} key={key}>
+            <div className={props.path.toLowerCase() === element.path ? `${styles.menuItems} ${styles.active}` : styles.menuItems} onClick={() => redirectLink(element.path)} key={key}>
               {element.title}
             </div>
           );
@@ -70,7 +70,7 @@ const NavBar = () => {
     <div className={styles.sideNav} id="sideNav">
       {navContent.map((element, key) => {
         return (
-          <div className={`${styles.menuItems} ${styles.navItems}`} onClick={() => redirectLink(element.path)} key={key}>
+          <div className={props.path.toLowerCase() === element.path ? `${styles.menuItems} ${styles.active}` : styles.menuItems} onClick={() => redirectLink(element.path)} key={key}>
             {element.title}
           </div>
         );
