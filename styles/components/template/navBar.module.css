@@ -6,6 +6,7 @@
     justify-content: space-between;
     background-color: var(--backgroundPrimary);
     z-index: 10;
+    animation: slideDown 1s ease;
 }
 
 .logoContainer {
@@ -69,5 +70,16 @@
     }
     .menuItems {
         text-align: center;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0%;
+        transform: translateY(-20%);
+    }
+    to {
+        opacity: 100%;
+        transform: translateY(0%);
     }
 }
