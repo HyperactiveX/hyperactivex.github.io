@@ -36,7 +36,8 @@
 }
 
 .menuItems:hover,
-.title:hover {
+.title:hover,
+.active {
     color: var(--greenPrimary);
 }
 

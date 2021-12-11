@@ -3,6 +3,7 @@ import Head from "next/head";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
 import styles from "../../styles/components/template/layout.module.css";
+import { useRouter } from "next/router";
 
 interface layoutProps {
   children: FC | JSX.Element;
@@ -10,6 +11,8 @@ interface layoutProps {
 }
 
 const Layout = ({ children, title }: layoutProps) => {
+  const router = useRouter()
+
   return (
     <Fragment>
       <Head>
@@ -18,7 +21,7 @@ const Layout = ({ children, title }: layoutProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.page}>
-        <NavBar />
+        <NavBar path={router.pathname.toString()} />
         <div className={styles.content}>{children}</div>
         <Footer />
       </div>
