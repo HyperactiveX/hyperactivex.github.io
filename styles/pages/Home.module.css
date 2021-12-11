@@ -3,7 +3,7 @@
     }
     
     .content {
-        width: 100vw;
+        width: 100%;
         height: var(--screenHeight);
         display: flex;
         align-items: center;
