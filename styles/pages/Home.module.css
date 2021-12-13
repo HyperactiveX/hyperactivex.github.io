@@ -4,40 +4,105 @@
     
     .content {
         width: 100%;
-        height: var(--screenHeight);
+        min-height: var(--screenHeight);
+        height: 200vh;
         display: flex;
+        flex-direction: column;
         align-items: center;
     }
-    
-    .cardContainer {
-        position: absolute;
-        transform: translateX(5%);
-        animation: slideRight 1s ease;
+    .fullname, 
+    .title, 
+    .highlightedCareer {
+        color: white;
+    }
+
+    .fullname {
+        margin-top: 6rem;
+        margin-bottom: 2rem;
+        font-family: var(--incompleeta);
+        font-size: 1.8rem;
+        text-align: center;
+        animation: slideUp 1.5s ease;
     }
     
+    .introContainer {
+        display: flex;
+        flex-direction: column;
+        animation: slideDown 1.5s ease;
+    }
     .title {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-family: var(--inter);
+        font-weight: bold;
+        font-size: 2rem;
         font-size: 3rem;
-        width: fit-content;
+        text-align: center;
+    }
+
+    .titleNickname {
+        font-size: 1.1em;
+        font-weight: bolder;
+        letter-spacing: 0px;
         background: var(--gradientGreen);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        margin-bottom: 0.5rem;
     }
     
     .description {
+        margin: 1rem 0;
+        padding: 0 1rem;
         font-size: 1.5rem;
-        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0px;
     }
     
     .descriptionElement {
-        margin: 0;
+        margin: 4px 0;
+    }
+
+    .highlightedCareer {
+        font-weight: 600;
+    }
+
+    .explorButton {
+        margin: 1rem 0;  
+        border: 1px solid transparent;
+        border-image-slice: 1;
+        border-image-source: var(--gradientGreen);
+        cursor: pointer;
+    }
+
+    .buttonText {
+        font-weight: 500;
+        font-size: 1.3rem;
+        padding: 0.75rem 4.5rem;
+        background: var(--gradientGreen);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .explorButton:hover {
+        background: var(--gradientGreen);
+    }
+    .buttonText:hover {
+        background: black;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .quoteImage {
+        margin: 2rem 0;
     }
     
     @media only screen and (max-width: 768px) {
         .page {
             background-image: radial-gradient(180deg, rgba(44, 154, 128, 1) -150%, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 100%);
         }
-        .cardContainer {
+        .introContainer {
             margin: 0;
             display: flex;
             flex-direction: column;
@@ -48,13 +113,6 @@
             margin-left: auto;
             margin-right: auto;
             animation: slideDown 1s ease;
-        }
-        .description {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 0 1rem;
         }
     }
     
@@ -67,21 +125,21 @@
         }
     }
     
-    @keyframes slideRight {
+    @keyframes slideUp {
         from {
             opacity: 0%;
-            transform: translateX(0%);
+            transform: translateY(10%);
         }
         to {
             opacity: 100%;
-            transform: translateX(5%);
+            transform: translateY(0%);
         }
     }
     
     @keyframes slideDown {
         from {
             opacity: 0%;
-            transform: translateY(-5%);
+            transform: translateY(-10%);
         }
         to {
             opacity: 100%;

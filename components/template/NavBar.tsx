@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "../../styles/components/template/navBar.module.css";
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { useRouter } from 'next/router'
 
 const NavBar = (props:any) => {
@@ -23,10 +23,6 @@ const NavBar = (props:any) => {
       title: "About me",
       path: "/about-me",
     },
-    {
-      title: "Contact me",
-      path: "/contact-me",
-    },
   ];
 
   const redirectLink = (route:string) => {
@@ -36,9 +32,13 @@ const NavBar = (props:any) => {
   const openSideNav = (status:boolean) => {
     setActive(status)
     if (status) {
+      document.getElementById("sideNav")!.style.opacity = '100%'
       document.getElementById("sideNav")!.style.top = '0%'
+      document.getElementById("sideNav")!.style.pointerEvents = 'all'
     } else {
-      document.getElementById("sideNav")!.style.top = '-50%'
+      document.getElementById("sideNav")!.style.opacity = '0%'
+      document.getElementById("sideNav")!.style.top = '-1%'
+      document.getElementById("sideNav")!.style.pointerEvents = 'none'
     }
   }
 
@@ -49,7 +49,7 @@ const NavBar = (props:any) => {
         <Link href="/">
           <a href="/">
             <h2 className={`${styles.title} ${styles.navItems}`}>
-              Tortoei.com
+              TORTOEI.
             </h2>
           </a>
         </Link>

@@ -1,7 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 :root {
+    --incompleeta: 'Incompleeta';
+    --inter: 'Inter', sans-serif; 
+    --montserrat: 'Montserrat', sans-serif;
     --greenPrimary: #77D799;
-    --whiteFontColor: #FFFFFF;
+    --whiteFontColor: #A9A9A9;
     --blackFontColor: #010E11;
     --backgroundPrimary: #010E11;
     --screenHeight: calc(100vh - 128px);
@@ -13,13 +18,11 @@ html,
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
     color: var(--whiteFontColor);
     background-color: var(--backgroundPrimary);
-    letter-spacing: 2px;
-    /* font-family: "Hahmlet", serif; */
-    /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
 }
 
 a {
@@ -30,3 +33,18 @@ a {
 * {
     box-sizing: border-box;
 }
+
+/* Incompleeta */
+@font-face {
+    font-family: 'Incompleeta';
+    src: url('/fonts/IncompleetaRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 
+Font List:
+    font-family: 'Incompleeta';
+    font-family: 'Inter', sans-serif; 
+    font-family: 'Montserrat', sans-serif;
+*/

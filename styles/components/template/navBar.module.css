@@ -4,7 +4,7 @@
     display: flex;
     position: static;
     justify-content: space-between;
-    background-color: var(--backgroundPrimary);
+    background-color: transparent;
     z-index: 10;
     animation: slideDown 1s ease;
 }
@@ -15,8 +15,13 @@
 }
 
 .title {
-    margin: 0 1rem;
+    margin-left: 2rem;
+    font-size: 1.75rem;
     font-weight: 500;
+    font-family: var(--incompleeta);
+    background: var(--gradientGreen);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .menuContainer {
@@ -29,10 +34,10 @@
 .menuItems {
     height: 70%;
     padding: 0.5rem;
-    margin: 0 0.5rem;
+    margin: 0 1rem;
     display: inherit;
     align-items: center;
-    font-size: 1.15rem;
+    font-size: 1rem;
 }
 
 .menuItems:hover,
@@ -50,15 +55,19 @@
 }
 
 .sideNav {
-    margin-top: 64px;
+    padding-top: 64px;
+    padding-bottom: 1rem;
     position: absolute;
-    top: -50%;
+    pointer-events: none;
+    opacity: 0%;
+    top: -1%;
     right: 0;
     left: 0;
     margin-left: auto;
     margin-right: auto;
     transition: all 1s ease;
-    background-color: var(--backgroundPrimary);
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9;
 }
 
 @media only screen and (max-width: 768px) {
@@ -74,13 +83,3 @@
     }
 }
 
-@keyframes slideDown {
-    from {
-        opacity: 0%;
-        transform: translateY(-20%);
-    }
-    to {
-        opacity: 100%;
-        transform: translateY(0%);
-    }
-}
