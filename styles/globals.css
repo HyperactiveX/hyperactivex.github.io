@@ -6,11 +6,12 @@
     --inter: 'Inter', sans-serif; 
     --montserrat: 'Montserrat', sans-serif;
     --greenPrimary: #77D799;
-    --whiteFontColor: #A9A9A9;
+    --greyFontColor: #A9A9A9;
     --blackFontColor: #010E11;
     --backgroundPrimary: #010E11;
     --screenHeight: calc(100vh - 128px);
     --gradientGreen: linear-gradient(90deg, rgba(84, 210, 89, 1) 0%, rgba(78, 214, 188, 1) 20%, rgba(77, 216, 201, 1) 40%, rgba(129, 232, 203, 1) 60%, rgba(115, 211, 187, 1) 80%, rgba(44, 154, 128, 1) 100%);
+    --gradientGreenVertical: linear-gradient(180deg, rgba(84, 210, 89, 1) 0%, rgba(78, 214, 188, 1) 20%, rgba(77, 216, 201, 1) 40%, rgba(129, 232, 203, 1) 60%, rgba(115, 211, 187, 1) 80%, rgba(44, 154, 128, 1) 100%);
     /* #e3e2de */
 }
 
@@ -21,7 +22,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     letter-spacing: 2px;
-    color: var(--whiteFontColor);
+    color: var(--greyFontColor);
     background-color: var(--backgroundPrimary);
 }
 
@@ -41,6 +42,27 @@ a {
     font-weight: normal;
     font-style: normal;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--backgroundPrimary);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--greyFontColor);
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #858585;
+  }
 
 /* 
 Font List:
