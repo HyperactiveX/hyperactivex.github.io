@@ -1,5 +1,5 @@
     .page {
-        background-image: radial-gradient(180deg, rgba(44, 154, 128, 1) -150%, rgb(0, 0, 0) 45%, rgb(0, 0, 0) 100%);
+        background-image: radial-gradient(top, rgba(44, 154, 128, 1) -150%, rgb(0, 0, 0) 35%);
     }
     
     .content {
