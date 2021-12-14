@@ -35,8 +35,7 @@
         margin-bottom: 1rem;
         font-family: var(--inter);
         font-weight: bold;
-        font-size: 2rem;
-        font-size: 3rem;
+        font-size: 2.5rem;
         text-align: center;
     }
 
@@ -50,9 +49,9 @@
     }
     
     .description {
-        margin: 1rem 0;
+        margin-bottom: 2rem;
         padding: 0 1rem;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -69,7 +68,7 @@
     }
 
     .explorButton {
-        margin: 1rem 0;  
+        margin: 2rem 0;  
         border: 1px solid transparent;
         border-image-slice: 1;
         border-image-source: var(--gradientGreen);
@@ -84,7 +83,6 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
     .explorButton:hover {
         background: var(--gradientGreen);
     }
