@@ -20,7 +20,7 @@ export default function Home() {
             <div className={styles.explorButton}>
               <div className={styles.buttonText}>Explore</div>
             </div>
-          <img className={styles.quoteImage} src="/images/homepage/quote.svg" alt="Quote by Franklin D. Roosevelt" width="60%"/>
+          <img className={styles.quoteImage} src="/images/homepage/quote.svg" alt="Quote by Franklin D. Roosevelt" width="50%"/>
        </div>
       </Layout>
     </div>
