@@ -35,8 +35,7 @@
         margin-bottom: 1rem;
         font-family: var(--inter);
         font-weight: bold;
-        font-size: 2rem;
-        font-size: 3rem;
+        font-size: 2.5rem;
         text-align: center;
     }
 
@@ -50,9 +49,9 @@
     }
     
     .description {
-        margin: 1rem 0;
+        margin-bottom: 2rem;
         padding: 0 1rem;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -69,7 +68,7 @@
     }
 
     .explorButton {
-        margin: 1rem 0;  
+        margin: 2rem 0;  
         border: 1px solid transparent;
         border-image-slice: 1;
         border-image-source: var(--gradientGreen);
@@ -84,7 +83,6 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
     .explorButton:hover {
         background: var(--gradientGreen);
     }
@@ -97,10 +95,18 @@
     .quoteImage {
         margin: 2rem 0;
     }
-    
+    @media only screen and (max-width: 1024px) {
+        .quoteImage {
+            width: 80%;
+        }
+    }
+
     @media only screen and (max-width: 768px) {
         .page {
             background-image: radial-gradient(180deg, rgba(44, 154, 128, 1) -150%, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 100%);
+        }
+        .quoteImage {
+            width: 90%;
         }
         .introContainer {
             margin: 0;
@@ -115,12 +121,31 @@
             animation: slideDown 1s ease;
         }
     }
-    
-    @media only screen and (max-width: 320px) {
+    @media only screen and (max-width: 425px) {
         .title {
-            font-size: 2.2rem;
+            font-size: 2rem;
         }
         .description {
+            font-size: 1rem;
+        }
+        .buttonText {
+            font-size: 1rem;
+        }
+
+    }
+    @media only screen and (max-width: 375px) {
+        .fullname {
+            font-size: 1.6rem;
+        }
+        .title {
+            font-size: 1.5rem;
+        }
+        .description {
+            font-size: 0.9rem;
+        }
+    }
+    @media only screen and (max-width: 320px) {
+        .fullname {
             font-size: 1.3rem;
         }
     }
