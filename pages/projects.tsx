@@ -1,26 +1,10 @@
-import Layout from "../components/template/Layout";
-import { Fragment } from "react";
+import styles from "../styles/pages/Projects.module.css"
 
 const Projects = () => {
   return (
-    <Fragment>
-      <Layout title="Projects | Tortoei">
-        <div className="page">
-          <i>Coming soon</i>
-        </div>
-      </Layout>
-      <style jsx>
-        {`
-          .page {
-            display: flex;
-            width: 100%;
-            height: 100%;
-            justify-content: center;
-            align-items: center;
-          }
-        `}
-      </style>
-    </Fragment>
+    <div className={styles.content}>
+        <h2>THIS IS PROJECTS SECTION</h2>
+    </div>
   );
 };
 

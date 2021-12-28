@@ -1,28 +1,43 @@
+import HomeContent from './home'
+import ProjectsContent from './projects'
+import SandboxContent from './sandbox'
+import AboutMeContent from './about-me'
 import Layout from "../components/template/Layout";
-import styles from "../styles/pages/Home.module.css";
+import styles from "../styles/pages/Index.module.css";
 
-export default function Home() {
+const Home = () => {
+  const sections = [
+    {
+      id: 'home',
+      content: <HomeContent/>,
+    },
+    {
+      id: 'projects',
+      content: <ProjectsContent/>,
+    },
+    {
+      id: 'sandbox',
+      content: <SandboxContent/>,
+    },
+    {
+      id: 'about-me',
+      content: <AboutMeContent/>,
+    },
+  ]
+
   return (
     <div className={styles.page}>
-      <Layout title="Homepage | Tortoei">
+      <Layout title="Tortoei">
         <div className={styles.content}>
-          <div className={styles.fullname}>
-            Chalanthorn Sirimongkholphawong
-          </div>
-          <div className={styles.introContainer}>
-            <div className={styles.title}>Hi there, I'm <span className={styles.titleNickname}>TOEI</span></div>
-            <div className={styles.description}>
-              <p className={styles.descriptionElement}>I’m a junior year student in Computer Science </p>
-              <p className={styles.descriptionElement}>at King Mongkut’s University of Technology Thonburi.</p>
-              <p className={styles.descriptionElement}>I’m aspired to become a <span className={styles.highlightedCareer}>full stack developer.</span></p>
-            </div>
-          </div>
-            <div className={styles.explorButton}>
-              <div className={styles.buttonText}>Explore</div>
-            </div>
-          <img className={styles.quoteImage} src="/images/homepage/quote.svg" alt="Quote by Franklin D. Roosevelt" width="50%"/>
+          {sections ? sections.map((element, key) => {
+            return (<section className={styles.section} id={element.id} key={key}>
+              {element.content}
+            </section>)
+          }) : ""}
        </div>
       </Layout>
     </div>
   );
 }
+
+export default Home
