@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "../../styles/components/template/navBar.module.css";
 import { Fragment, useEffect, useState } from "react";
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 
 const NavBar = (props:any) => {
   const router = useRouter()
@@ -25,9 +25,21 @@ const NavBar = (props:any) => {
     },
   ];
 
-  // const redirectLink = (route:string) => {
-  //   router.push(route)
-  // }
+  const handleClick = (path:string) => {
+    router.push(path)
+  }
+
+  const handleActive = (path:string) => {
+    if (router.asPath === "/"+path) {
+      return `${styles.menuItems} ${styles.active}`
+    }
+    return styles.menuItems
+    
+  }
+  const handleMobileClick = (path:string) => {
+    router.push(path)
+    openSideNav(!isActive)
+  }
 
   const openSideNav = (status:boolean) => {
     setActive(status)
@@ -57,10 +69,7 @@ const NavBar = (props:any) => {
       <div className={styles.menuContainer}>
         {navContent.map((element, key) => {
           return (
-            // <div className={props.path.toLowerCase() === element.path ? `${styles.menuItems} ${styles.active}` : styles.menuItems} onClick={() => redirectLink(element.path)} key={key}>
-            //   {element.title}
-            // </div>
-            <a className={styles.menuItems} href={element.path} key={key}>
+            <a className={handleActive(element.path)} onClick={() => { handleClick(element.path)}} key={key}>
               {element.title}
             </a>
           );
@@ -73,12 +82,9 @@ const NavBar = (props:any) => {
     <div className={styles.sideNav} id="sideNav">
       {navContent.map((element, key) => {
         return (
-          // <div className={props.path.toLowerCase() === element.path ? `${styles.menuItems} ${styles.active}` : styles.menuItems} onClick={() => redirectLink(element.path)} key={key}>
-          //   {element.title}
-          // </div>
-          <a className={styles.menuItems} href={element.path} key={key}>
-              {element.title}
-            </a>
+          <a className={handleActive(element.path)} onClick={() => handleMobileClick(element.path)} key={key}>
+            {element.title}
+          </a>
         );
       })}
     </div>

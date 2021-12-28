@@ -2,9 +2,9 @@
     height: 4rem;
     width: 100%;
     display: flex;
-    position: static;
+    position: fixed;
     justify-content: space-between;
-    background-color: transparent;
+    background-color: black;
     z-index: 10;
     animation: slideDown 1s ease;
 }
@@ -51,13 +51,14 @@
 }
 
 .hamburgerIcon {
+    width: 2rem;
     cursor: pointer;
 }
 
 .sideNav {
     padding-top: 64px;
     padding-bottom: 1rem;
-    position: absolute;
+    position: fixed;
     pointer-events: none;
     opacity: 0%;
     top: -1%;
@@ -65,7 +66,7 @@
     left: 0;
     margin-left: auto;
     margin-right: auto;
-    transition: all 1s ease;
+    transition: all 0.25s ease;
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 9;
 }
