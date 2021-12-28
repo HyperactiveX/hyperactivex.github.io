@@ -24,6 +24,7 @@ body {
     letter-spacing: 2px;
     color: var(--greyFontColor);
     background-color: var(--backgroundPrimary);
+    scroll-behavior: smooth;
 }
 
 a {
