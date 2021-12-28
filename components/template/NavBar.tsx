@@ -9,25 +9,25 @@ const NavBar = (props:any) => {
   const navContent = [
     {
       title: "Home",
-      path: "/",
+      path: "#home",
     },
     {
       title: "Projects",
-      path: "/projects",
+      path: "#projects",
     },
     {
       title: "Sandbox",
-      path: "/sandbox",
+      path: "#sandbox",
     },
     {
       title: "About me",
-      path: "/about-me",
+      path: "#about-me",
     },
   ];
 
-  const redirectLink = (route:string) => {
-    router.push(route)
-  }
+  // const redirectLink = (route:string) => {
+  //   router.push(route)
+  // }
 
   const openSideNav = (status:boolean) => {
     setActive(status)
@@ -46,8 +46,8 @@ const NavBar = (props:any) => {
     <Fragment>
     <div className={styles.navContainer}>
       <div className={styles.logoContainer}>
-        <Link href="/">
-          <a href="/">
+        <Link href="#home">
+          <a href="#home">
             <h2 className={`${styles.title} ${styles.navItems}`}>
               TORTOEI.
             </h2>
@@ -57,9 +57,12 @@ const NavBar = (props:any) => {
       <div className={styles.menuContainer}>
         {navContent.map((element, key) => {
           return (
-            <div className={props.path.toLowerCase() === element.path ? `${styles.menuItems} ${styles.active}` : styles.menuItems} onClick={() => redirectLink(element.path)} key={key}>
+            // <div className={props.path.toLowerCase() === element.path ? `${styles.menuItems} ${styles.active}` : styles.menuItems} onClick={() => redirectLink(element.path)} key={key}>
+            //   {element.title}
+            // </div>
+            <a className={styles.menuItems} href={element.path} key={key}>
               {element.title}
-            </div>
+            </a>
           );
         })}
       </div>
@@ -70,9 +73,12 @@ const NavBar = (props:any) => {
     <div className={styles.sideNav} id="sideNav">
       {navContent.map((element, key) => {
         return (
-          <div className={props.path.toLowerCase() === element.path ? `${styles.menuItems} ${styles.active}` : styles.menuItems} onClick={() => redirectLink(element.path)} key={key}>
-            {element.title}
-          </div>
+          // <div className={props.path.toLowerCase() === element.path ? `${styles.menuItems} ${styles.active}` : styles.menuItems} onClick={() => redirectLink(element.path)} key={key}>
+          //   {element.title}
+          // </div>
+          <a className={styles.menuItems} href={element.path} key={key}>
+              {element.title}
+            </a>
         );
       })}
     </div>
