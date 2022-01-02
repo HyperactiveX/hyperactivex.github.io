@@ -10,7 +10,7 @@ const NavBar = (props:any) => {
   const navContent = [
     {
       title: "Home",
-      path: "/home",
+      path: "/",
     },
     {
       title: "Projects",
