@@ -1,6 +1,5 @@
 import Link from "next/link";
 import styles from "../../styles/components/template/navBar.module.css";
-import Image from 'next/image';
 import { Fragment, useState } from "react";
 import { useRouter } from "next/router";
 
@@ -99,7 +98,7 @@ const NavBar = (props:any) => {
       <div className={styles.contactList}>
         {listOfContacts.map((element, key) => {
           return <a className={styles.contactIcons} href={element.link} title={element.alt} target="_blank" key={key}>
-          <Image
+          <img
             src={element.image}
             height={20}
             width={20}
@@ -108,7 +107,7 @@ const NavBar = (props:any) => {
         })}
       </div>
       <div className={styles.hamburgerSideNav}>
-        <Image className={styles.hamburgerIcon} 
+        <img className={styles.hamburgerIcon} 
           src="/images/navBar/hamburger.svg" 
           height={32} 
           width={32} 
@@ -126,7 +125,7 @@ const NavBar = (props:any) => {
       <div className={styles.contactListInHamburger}>
         {listOfContacts.map((element, key) => {
           return <a className={styles.contactIcons} href={element.link} title={element.alt} target="_blank" key={key}>
-          <Image
+          <img
             src={element.image}
             height={20}
             width={20}
