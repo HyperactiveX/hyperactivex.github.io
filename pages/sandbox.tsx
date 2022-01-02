@@ -1,25 +1,15 @@
 import { Fragment } from "react";
 import Layout from "../components/template/Layout";
+import styles from "../styles/pages/Sandbox.module.css"
 
 const Sandbox = () => {
   return (
     <Fragment>
-      <Layout title="Sandbox | Tortoei">
-        <div className="page">
-          <i>Coming soon</i>
+      <Layout title="Tortoei">
+        <div className={styles.content}>
+        <div className={styles.comingSoon}>Coming Soon</div>
         </div>
       </Layout>
-      <style jsx>
-        {`
-          .page {
-            display: flex;
-            width: 100%;
-            height: 100%;
-            justify-content: center;
-            align-items: center;
-          }
-        `}
-      </style>
     </Fragment>
   );
 };

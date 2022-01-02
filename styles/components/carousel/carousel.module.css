@@ -1,0 +1,70 @@
+.embla {
+	overflow: hidden;
+}
+.embla__container {
+	display: flex;
+	height: 400px;
+}
+.embla__slide {
+	position: relative;
+	flex: 0 0 20%;
+	margin-right: 15px;
+	margin-left: 15px;
+}
+
+.embla__prev,
+.embla__next {
+	position: absolute;
+	top: 35%;
+	z-index: 10;
+}
+.embla__prev {
+	left: 5%;
+}
+.embla__next {
+	right: 5%;
+}
+
+@media only screen and (max-width: 1440px) {
+	.embla__slide {
+		flex: 0 0 25%;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.embla__slide {
+		flex: 0 0 30%;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.embla__slide {
+		flex: 0 0 40%;
+	}
+}
+
+@media only screen and (max-width: 425px) {
+	.embla__slide {
+		flex: 0 0 70%;
+	}
+	.embla__slide {
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	.embla__slide {
+		flex: 0 0 80%;
+	}
+	.embla__slide {
+		margin-right: 5px;
+		margin-left: 5px;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	.embla__slide {
+		flex: 0 0 90%;
+	}
+}

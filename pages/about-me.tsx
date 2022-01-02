@@ -1,25 +1,25 @@
-import Layout from "../components/template/Layout";
 import { Fragment } from "react";
+import Layout from "../components/template/Layout";
+import styles from "../styles/pages/AboutMe.module.css"
 
 const AboutMe = () => {
   return (
     <Fragment>
-      <Layout title="About me | Tortoei">
-        <div className="page">
-          <i>Coming soon</i>
+      <Layout title="Tortoei">
+        <div className={styles.content}>
+          <div className={styles.comingSoon}>Coming Soon</div>
+          {/* <div className={styles.imageBox}>
+            <img
+              className={styles.profileImage}
+              src={`/images/mypf.jpg`}
+              alt={`My profile picture`}
+              />
+          </div>
+          <div className={styles.descriptionBox}>
+            This contains description
+          </div> */}
         </div>
       </Layout>
-      <style jsx>
-        {`
-          .page {
-            display: flex;
-            width: 100%;
-            height: 100%;
-            justify-content: center;
-            align-items: center;
-          }
-        `}
-      </style>
     </Fragment>
   );
 };

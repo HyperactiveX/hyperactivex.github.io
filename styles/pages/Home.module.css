@@ -1,173 +1,291 @@
-    .page {
-        background-image: radial-gradient(180deg, rgba(44, 154, 128, 1) -150%, rgb(0, 0, 0) 45%, rgb(0, 0, 0) 100%);
-    }
-    
-    .content {
-        width: 100%;
-        min-height: var(--screenHeight);
-        height: 200vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .fullname, 
-    .title, 
-    .highlightedCareer {
-        color: white;
-    }
+.content {
+	width: 100%;
+	min-height: var(--screenHeight);
+	height: 200vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.landingContainer {
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	background-image: radial-gradient(
+		top,
+		rgba(44, 154, 128, 1) -120%,
+		rgb(1, 14, 17) 35%
+	);
+}
+.pictureContainer,
+.descriptionContainer {
+	height: 100%;
+}
+.personVector {
+	position: absolute;
+	top: 0;
+	height: 100vh;
+}
+.descriptionContainer {
+	width: fit-content;
+	padding-top: 4.5rem;
+	position: absolute;
+	left: 55%;
+	right: 0;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
 
-    .fullname {
-        margin-top: 6rem;
-        margin-bottom: 2rem;
-        font-family: var(--incompleeta);
-        font-size: 1.8rem;
-        text-align: center;
-        animation: slideUp 1.5s ease;
-    }
-    
-    .introContainer {
-        display: flex;
-        flex-direction: column;
-        animation: slideDown 1.5s ease;
-    }
-    .title {
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-        font-family: var(--inter);
-        font-weight: bold;
-        font-size: 2.5rem;
-        text-align: center;
-    }
+.fullname,
+.title,
+.highlightedCareer {
+	color: white;
+}
 
-    .titleNickname {
-        font-size: 1.1em;
-        font-weight: bolder;
-        letter-spacing: 0px;
-        background: var(--gradientGreen);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    
-    .description {
-        margin-bottom: 2rem;
-        padding: 0 1rem;
-        font-size: 1.2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        letter-spacing: 0px;
-    }
-    
-    .descriptionElement {
-        margin: 4px 0;
-    }
+.fullname {
+	margin-bottom: 2rem;
+	font-family: var(--incompleeta);
+	font-size: 1.25rem;
+	text-align: center;
+	animation: slideUp 1.5s ease;
+}
 
-    .highlightedCareer {
-        font-weight: 600;
-    }
+.introContainer {
+	display: flex;
+	flex-direction: column;
+	animation: slideDown 1.5s ease;
+}
+.title {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	font-family: var(--inter);
+	font-weight: bold;
+	font-size: 2.5rem;
+}
 
-    .explorButton {
-        margin: 2rem 0;  
-        border: 1px solid transparent;
-        border-image-slice: 1;
-        border-image-source: var(--gradientGreen);
-        cursor: pointer;
-    }
+.titleNickname {
+	font-size: 1.1em;
+	font-weight: bolder;
+	letter-spacing: 0px;
+	background: var(--gradientGreen);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
 
-    .buttonText {
-        font-weight: 500;
-        font-size: 1.3rem;
-        padding: 0.75rem 4.5rem;
-        background: var(--gradientGreen);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    .explorButton:hover {
-        background: var(--gradientGreen);
-    }
-    .buttonText:hover {
-        background: black;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+.description {
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+	font-size: 1.2rem;
+	display: flex;
+	flex-direction: column;
+	letter-spacing: 0px;
+}
 
-    .quoteImage {
-        margin: 2rem 0;
-    }
-    @media only screen and (max-width: 1024px) {
-        .quoteImage {
-            width: 80%;
-        }
-    }
+.descriptionElement {
+	margin: 4px 0;
+}
 
-    @media only screen and (max-width: 768px) {
-        .page {
-            background-image: radial-gradient(180deg, rgba(44, 154, 128, 1) -150%, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 100%);
-        }
-        .quoteImage {
-            width: 90%;
-        }
-        .introContainer {
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transform: translateX(0%);
-            right: 0;
-            left: 0;
-            margin-left: auto;
-            margin-right: auto;
-            animation: slideDown 1s ease;
-        }
-    }
-    @media only screen and (max-width: 425px) {
-        .title {
-            font-size: 2rem;
-        }
-        .description {
-            font-size: 1rem;
-        }
-        .buttonText {
-            font-size: 1rem;
-        }
+.highlightedCareer {
+	font-weight: 600;
+}
 
-    }
-    @media only screen and (max-width: 375px) {
-        .fullname {
-            font-size: 1.6rem;
-        }
-        .title {
-            font-size: 1.5rem;
-        }
-        .description {
-            font-size: 0.9rem;
-        }
-    }
-    @media only screen and (max-width: 320px) {
-        .fullname {
-            font-size: 1.3rem;
-        }
-    }
-    
-    @keyframes slideUp {
-        from {
-            opacity: 0%;
-            transform: translateY(10%);
-        }
-        to {
-            opacity: 100%;
-            transform: translateY(0%);
-        }
-    }
-    
-    @keyframes slideDown {
-        from {
-            opacity: 0%;
-            transform: translateY(-10%);
-        }
-        to {
-            opacity: 100%;
-            transform: translateY(0%);
-        }
-    }
+.explorButton {
+	margin: 2rem 0;
+	border: 1px solid transparent;
+	border-image-slice: 1;
+	border-image-source: var(--gradientGreen);
+	cursor: pointer;
+}
+
+.buttonText {
+	font-weight: 500;
+	font-size: 1.3rem;
+	padding: 0.75rem 4.5rem;
+	background: var(--gradientGreen);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.explorButton:hover {
+	background: var(--gradientGreen);
+}
+.buttonText:hover {
+	background: black;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.quoteImage {
+	margin: 2rem 0;
+}
+
+.projects {
+	height: 100vh;
+	width: 100%;
+	background-image: radial-gradient(
+		rgb(129, 232, 203) -30%,
+		rgb(1, 14, 17) 33%
+	);
+}
+
+.triangleVector {
+	position: absolute;
+	margin: auto;
+	right: 0;
+	left: 0;
+	width: 70vw;
+}
+
+.latestProject {
+	font-weight: 900;
+	position: absolute;
+	top: 110%;
+	left: 10%;
+	color: white;
+	display: flex;
+	flex-direction: column;
+}
+.text {
+	font-size: 1.75rem;
+}
+.text::after {
+	content: "";
+	display: block;
+	margin-top: 0.75rem;
+	height: 5px;
+	width: 200px;
+	background: rgb(78, 214, 188);
+	background: linear-gradient(
+		90deg,
+		rgba(78, 214, 188, 1) 0%,
+		rgba(77, 216, 201, 1) 20%,
+		rgba(1, 14, 17, 1) 50%
+	);
+	border-radius: 10px;
+}
+.textDescription {
+	font-weight: 100;
+	margin-top: 0;
+}
+
+.carousel {
+	position: absolute;
+	top: 135%;
+	height: 50vh;
+	width: 100%;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+@media only screen and (max-width: 1366px) {
+	.personVector {
+		left: -5%;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.personVector,
+	.descriptionContainer {
+		margin: auto;
+		left: 0;
+		right: 0;
+	}
+
+	.personVector {
+		height: 50%;
+		left: 10%;
+	}
+	.descriptionContainer {
+		top: 25%;
+		align-items: center;
+	}
+	.description {
+		align-items: center;
+	}
+	.introContainer {
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		transform: translateX(0%);
+		right: 0;
+		left: 0;
+		margin-left: auto;
+		margin-right: auto;
+		animation: slideDown 1s ease;
+	}
+	.descriptionElement {
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 425px) {
+	.title {
+		font-size: 2rem;
+	}
+	.description {
+		font-size: 1rem;
+	}
+	.buttonText {
+		font-size: 1rem;
+	}
+	.personVector {
+		top: 10%;
+		height: 35%;
+	}
+	.descriptionElement {
+		margin: 0 0.5rem;
+	}
+	.descriptionContainer {
+		top: 20%;
+		align-items: center;
+	}
+}
+@media only screen and (max-width: 375px) {
+	.fullname {
+		font-size: 1.6rem;
+	}
+	.title {
+		font-size: 1.5rem;
+	}
+	.description {
+		font-size: 0.9rem;
+	}
+	.personVector {
+		top: 15%;
+		height: 30%;
+	}
+}
+@media only screen and (max-width: 320px) {
+	.fullname {
+		font-size: 1.3rem;
+	}
+	.personVector {
+		top: 20%;
+		height: 25%;
+	}
+}
+
+@keyframes slideUp {
+	from {
+		opacity: 0%;
+		transform: translateY(10%);
+	}
+	to {
+		opacity: 100%;
+		transform: translateY(0%);
+	}
+}
+
+@keyframes slideDown {
+	from {
+		opacity: 0%;
+		transform: translateY(-10%);
+	}
+	to {
+		opacity: 100%;
+		transform: translateY(0%);
+	}
+}

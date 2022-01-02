@@ -1,0 +1,27 @@
+.content {
+	width: 100%;
+	min-height: var(--screenHeight);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.comingSoon {
+	font-style: italic;
+}
+
+.imageBox,
+.descriptionBox {
+	display: flex;
+	justify-content: center;
+}
+.imageBox {
+	width: 38.22%;
+}
+.descriptionBox {
+	width: 61.77%;
+}
+
+.profileImage {
+	height: 30rem;
+}

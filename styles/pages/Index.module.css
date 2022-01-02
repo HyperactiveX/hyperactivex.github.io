@@ -1,0 +1,15 @@
+.content {
+	width: 100%;
+	min-height: var(--screenHeight);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.section {
+	width: 100%;
+	min-height: 100vh;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}

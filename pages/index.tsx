@@ -1,28 +1,20 @@
+import HomeContent from './home'
 import Layout from "../components/template/Layout";
-import styles from "../styles/pages/Home.module.css";
+import styles from "../styles/pages/Index.module.css";
+import { Fragment } from 'react';
 
-export default function Home() {
+const Home = () => {
   return (
-    <div className={styles.page}>
-      <Layout title="Homepage | Tortoei">
+    <Fragment>
+      <Layout title="Tortoei">
         <div className={styles.content}>
-          <div className={styles.fullname}>
-            Chalanthorn Sirimongkholphawong
+          <div className={styles.section}>
+              <HomeContent />
           </div>
-          <div className={styles.introContainer}>
-            <div className={styles.title}>Hi there, I'm <span className={styles.titleNickname}>TOEI</span></div>
-            <div className={styles.description}>
-              <p className={styles.descriptionElement}>I’m a junior year student in Computer Science </p>
-              <p className={styles.descriptionElement}>at King Mongkut’s University of Technology Thonburi.</p>
-              <p className={styles.descriptionElement}>I’m aspired to become a <span className={styles.highlightedCareer}>full stack developer.</span></p>
-            </div>
-          </div>
-            <div className={styles.explorButton}>
-              <div className={styles.buttonText}>Explore</div>
-            </div>
-          <img className={styles.quoteImage} src="/images/homepage/quote.svg" alt="Quote by Franklin D. Roosevelt" width="50%"/>
        </div>
       </Layout>
-    </div>
+    </Fragment>
   );
 }
+
+export default Home
