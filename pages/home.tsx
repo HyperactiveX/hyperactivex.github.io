@@ -1,7 +1,8 @@
+import Carousel from "../components/Carousel";
 import styles from "../styles/pages/Home.module.css";
-import Image from 'next/image'
 
 const HomeContent = () => {
+  
   return (
   <div className={styles.content}>
     <div className={styles.landingContainer}>
@@ -27,6 +28,13 @@ const HomeContent = () => {
     </div>
     <div className={styles.projects}>
       <img className={styles.triangleVector} src="/images/homepage/triangle.svg" />
+      <div className={styles.latestProject}>
+        <p className={styles.text}>My Projects</p>
+        <p className={styles.textDescription}>These are the projects that I have completed</p>
+      </div>
+      <div className={styles.carousel}>
+        <Carousel/>
+      </div>
     </div>
   </div>)
 }

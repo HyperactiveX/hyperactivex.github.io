@@ -124,8 +124,8 @@
 	height: 100vh;
 	width: 100%;
 	background-image: radial-gradient(
-		rgb(129, 232, 203) -50%,
-		rgb(1, 14, 17) 35%
+		rgb(129, 232, 203) -30%,
+		rgb(1, 14, 17) 33%
 	);
 }
 
@@ -136,6 +136,49 @@
 	left: 0;
 	width: 70vw;
 }
+
+.latestProject {
+	font-weight: 900;
+	position: absolute;
+	top: 110%;
+	left: 10%;
+	color: white;
+	display: flex;
+	flex-direction: column;
+}
+.text {
+	font-size: 1.75rem;
+}
+.text::after {
+	content: "";
+	display: block;
+	margin-top: 0.75rem;
+	height: 5px;
+	width: 200px;
+	background: rgb(78, 214, 188);
+	background: linear-gradient(
+		90deg,
+		rgba(78, 214, 188, 1) 0%,
+		rgba(77, 216, 201, 1) 20%,
+		rgba(1, 14, 17, 1) 50%
+	);
+	border-radius: 10px;
+}
+.textDescription {
+	font-weight: 100;
+	margin-top: 0;
+}
+
+.carousel {
+	position: absolute;
+	top: 135%;
+	height: 50vh;
+	width: 100%;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
 @media only screen and (max-width: 1366px) {
 	.personVector {
 		left: -5%;

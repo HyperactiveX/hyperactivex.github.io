@@ -1,0 +1,37 @@
+.card {
+	height: 400px;
+	width: 100%;
+	box-shadow: 5px 10px var(--gradientGreen);
+}
+
+.container {
+	height: 100%;
+	width: 90%;
+}
+
+.picture,
+.description {
+	height: 50%;
+	width: 100%;
+}
+
+.picture {
+	display: flex;
+	justify-content: center;
+	padding: 1rem;
+	background-color: white;
+	border-radius: 10px 10px 0 0;
+}
+.description {
+	background-color: black;
+	border-radius: 0 0 10px 10px;
+	padding: 1rem;
+	font-size: 0.75rem;
+	/* text-align: center; */
+}
+.projectName {
+	margin-bottom: 1rem;
+	color: white;
+	font-size: 1rem;
+	font-weight: 700;
+}
