@@ -21,8 +21,10 @@ const Layout = ({ children, title }: layoutProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.page}>
-        <NavBar path={router.pathname.toString()} />
-        <div className={styles.content}>{children}</div>
+      <NavBar path={router.pathname.toString()} />
+        <div className={styles.content}>
+          {children}
+        </div>
         <Footer />
       </div>
     </Fragment>

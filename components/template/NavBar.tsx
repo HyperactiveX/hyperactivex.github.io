@@ -29,17 +29,20 @@ const NavBar = (props:any) => {
     {
       title: "Email",
       image: "/images/navBar/mail.svg",
-      link: "chalanthorn.s@mail.kmutt.ac.th",
+      link: "mailto:chalanthorn.s@mail.kmutt.ac.th",
+      alt: "chalanthorn.s@mail.kmutt.ac.th",
     },
     {
       title: "Github",
       image: "/images/navBar/github.svg",
       link: "https://github.com/HyperactiveX",
+      alt: "HyperactiveX",
     },
     {
       title: "Phone",
       image: "/images/navBar/phone.svg",
-      link: "0983163177",
+      link: "tel:+66983163177",
+      alt: "+66983163177",
     },
   ]
 
@@ -95,13 +98,13 @@ const NavBar = (props:any) => {
       </div>
       <div className={styles.contactList}>
         {listOfContacts.map((element, key) => {
-          return <div className={styles.contactIcons}>
+          return <a className={styles.contactIcons} href={element.link} title={element.alt} target="_blank">
           <Image
             src={element.image}
             height={20}
             width={20}
           />
-          </div>
+          </a>
         })}
       </div>
       <div className={styles.hamburgerSideNav}>
