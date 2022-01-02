@@ -98,7 +98,7 @@ const NavBar = (props:any) => {
       </div>
       <div className={styles.contactList}>
         {listOfContacts.map((element, key) => {
-          return <a className={styles.contactIcons} href={element.link} title={element.alt} target="_blank">
+          return <a className={styles.contactIcons} href={element.link} title={element.alt} target="_blank" key={key}>
           <Image
             src={element.image}
             height={20}
@@ -123,6 +123,17 @@ const NavBar = (props:any) => {
           </a>
         );
       })}
+      <div className={styles.contactListInHamburger}>
+        {listOfContacts.map((element, key) => {
+          return <a className={styles.contactIcons} href={element.link} title={element.alt} target="_blank" key={key}>
+          <Image
+            src={element.image}
+            height={20}
+            width={20}
+          />
+          </a>
+        })}
+      </div>
     </div>
   </Fragment>
   );

@@ -74,6 +74,11 @@
 	background-color: rgba(0, 0, 0, 0.8);
 	z-index: 9;
 }
+@media only screen and (max-width: 1240px) {
+	.navContainer {
+		padding: 0 5rem;
+	}
+}
 
 @media only screen and (max-width: 768px) {
 	.menuContainer {
@@ -81,9 +86,25 @@
 	}
 	.hamburgerSideNav {
 		display: flex;
-		margin-right: 1rem;
+		align-items: flex-end;
+		padding-bottom: 0.5rem;
+		justify-content: center;
+	}
+	.contactList {
+		display: none;
+	}
+	.contactListInHamburger {
+		display: flex;
+		justify-content: center;
 	}
 	.menuItems {
 		text-align: center;
+		margin: 1rem 2rem;
+	}
+}
+
+@media only screen and (max-width: 425px) {
+	.navContainer {
+		padding: 0 2rem;
 	}
 }
