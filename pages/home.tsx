@@ -4,8 +4,13 @@ import Image from 'next/image'
 const HomeContent = () => {
   return (
   <div className={styles.content}>
-      <div className={styles.fullname}>
-          Chalanthorn Sirimongkholphawong
+    <div className={styles.landingContainer}>
+      <div className={styles.pictureContainer}>
+        <img className={styles.personVector} src="/images/homepage/personVector.svg"/>
+      </div>
+      <div className={styles.descriptionContainer}>
+        <div className={styles.fullname}>
+            Chalanthorn Sirimongkholphawong
         </div>
         <div className={styles.introContainer}>
           <div className={styles.title}>Hi there, I'm <span className={styles.titleNickname}>TOEI</span></div>
@@ -15,17 +20,14 @@ const HomeContent = () => {
             <p className={styles.descriptionElement}>I’m aspired to become a <span className={styles.highlightedCareer}>full stack developer.</span></p>
           </div>
         </div>
-          <div className={styles.explorButton}>
+        <div className={styles.explorButton}>
             <div className={styles.buttonText}>Explore</div>
-          </div>
-          <Image 
-            className={styles.quoteImage} 
-            src={`/images/homepage/quote.svg`} 
-            alt={`Quote by Franklin D. Roosevelt`} 
-            width={1000}
-            height={600}
-            priority
-          />
+        </div>
+      </div>
+    </div>
+    <div className={styles.projects}>
+      <img className={styles.triangleVector} src="/images/homepage/triangle.svg" />
+    </div>
   </div>)
 }
 
