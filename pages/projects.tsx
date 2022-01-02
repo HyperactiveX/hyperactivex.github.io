@@ -7,7 +7,7 @@ const Projects = () => {
     <Fragment>
       <Layout title="Tortoei">
         <div className={styles.content}>
-            <h2>THIS IS PROJECTS SECTION</h2>
+            <div className={styles.comingSoon}>Coming Soon</div>
         </div>
       </Layout>
     </Fragment>

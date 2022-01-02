@@ -7,7 +7,8 @@ const AboutMe = () => {
     <Fragment>
       <Layout title="Tortoei">
         <div className={styles.content}>
-          <div className={styles.imageBox}>
+          <div className={styles.comingSoon}>Coming Soon</div>
+          {/* <div className={styles.imageBox}>
             <img
               className={styles.profileImage}
               src={`/images/mypf.jpg`}
@@ -16,7 +17,7 @@ const AboutMe = () => {
           </div>
           <div className={styles.descriptionBox}>
             This contains description
-          </div>
+          </div> */}
         </div>
       </Layout>
     </Fragment>

@@ -5,6 +5,11 @@
 	align-items: center;
 	justify-content: center;
 }
+
+.comingSoon {
+	font-style: italic;
+}
+
 .imageBox,
 .descriptionBox {
 	display: flex;

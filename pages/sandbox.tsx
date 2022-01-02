@@ -7,7 +7,7 @@ const Sandbox = () => {
     <Fragment>
       <Layout title="Tortoei">
         <div className={styles.content}>
-            <h2>Coming Soon</h2>
+        <div className={styles.comingSoon}>Coming Soon</div>
         </div>
       </Layout>
     </Fragment>
