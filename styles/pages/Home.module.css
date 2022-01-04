@@ -1,6 +1,6 @@
 .content {
 	width: 100%;
-	min-height: var(--screenHeight);
+	min-height: 1700px;
 	height: 200vh;
 	display: flex;
 	flex-direction: column;
@@ -9,7 +9,7 @@
 .landingContainer {
 	display: flex;
 	width: 100%;
-	height: 100vh;
+	height: 50%;
 	background-image: radial-gradient(
 		top,
 		rgba(44, 154, 128, 1) -120%,
@@ -17,21 +17,18 @@
 	);
 }
 .pictureContainer,
-.descriptionContainer {
+.descriptionContainer,
+.personVector {
 	height: 100%;
 }
 .personVector {
-	position: absolute;
-	top: 0;
-	height: 100vh;
+	width: 110%;
+	object-fit: contain;
 }
+
 .descriptionContainer {
 	width: fit-content;
 	padding-top: 4.5rem;
-	position: absolute;
-	left: 55%;
-	right: 0;
-	margin: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -121,7 +118,7 @@
 }
 
 .projects {
-	height: 100vh;
+	height: 50%;
 	width: 100%;
 	background-image: radial-gradient(
 		rgb(129, 232, 203) -30%,
@@ -130,21 +127,20 @@
 }
 
 .triangleVector {
-	position: absolute;
 	margin: auto;
-	right: 0;
-	left: 0;
+	position: absolute;
 	width: 70vw;
+	left: 0;
+	right: 0;
 }
 
 .latestProject {
 	font-weight: 900;
-	position: absolute;
-	top: 110%;
-	left: 10%;
 	color: white;
 	display: flex;
 	flex-direction: column;
+	margin: 0 8rem;
+	margin-top: 4rem;
 }
 .text {
 	font-size: 1.75rem;
@@ -170,35 +166,26 @@
 }
 
 .carousel {
-	position: absolute;
-	top: 135%;
-	height: 50vh;
+	margin-top: 6rem;
+	height: 50%;
 	width: 100%;
-	left: 0;
-	right: 0;
-	margin: auto;
-}
-
-@media only screen and (max-width: 1366px) {
-	.personVector {
-		left: -5%;
-	}
 }
 
 @media only screen and (max-width: 1024px) {
-	.personVector,
-	.descriptionContainer {
-		margin: auto;
-		left: 0;
-		right: 0;
+	.landingContainer {
+		flex-direction: column;
+		align-items: center;
 	}
-
 	.personVector {
-		height: 50%;
-		left: 10%;
+		width: 100%;
+		height: 50vh;
+		display: flex;
+	}
+	.pictureContainer {
+		height: fit-content;
 	}
 	.descriptionContainer {
-		top: 25%;
+		padding-top: 0;
 		align-items: center;
 	}
 	.description {
@@ -219,6 +206,9 @@
 	.descriptionElement {
 		text-align: center;
 	}
+	.latestProject {
+		margin: 0 4rem;
+	}
 }
 
 @media only screen and (max-width: 425px) {
@@ -230,10 +220,6 @@
 	}
 	.buttonText {
 		font-size: 1rem;
-	}
-	.personVector {
-		top: 10%;
-		height: 35%;
 	}
 	.descriptionElement {
 		margin: 0 0.5rem;
@@ -253,18 +239,13 @@
 	.description {
 		font-size: 0.9rem;
 	}
-	.personVector {
-		top: 15%;
-		height: 30%;
-	}
 }
 @media only screen and (max-width: 320px) {
 	.fullname {
 		font-size: 1.3rem;
 	}
-	.personVector {
-		top: 20%;
-		height: 25%;
+	.latestProject {
+		margin: 0 3rem;
 	}
 }
 

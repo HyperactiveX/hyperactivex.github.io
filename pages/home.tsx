@@ -7,7 +7,7 @@ const HomeContent = () => {
   <div className={styles.content}>
     <div className={styles.landingContainer}>
       <div className={styles.pictureContainer}>
-        <img className={styles.personVector} src="/images/homepage/personVector.svg"/>
+        <img className={styles.personVector} src="/images/homepage/personVector.png"/>
       </div>
       <div className={styles.descriptionContainer}>
         <div className={styles.fullname}>
@@ -27,7 +27,7 @@ const HomeContent = () => {
       </div>
     </div>
     <div className={styles.projects}>
-      <img className={styles.triangleVector} src="/images/homepage/triangle.svg" />
+    <img className={styles.triangleVector} src="/images/homepage/triangle.svg" />
       <div className={styles.latestProject}>
         <p className={styles.text}>My Projects</p>
         <p className={styles.textDescription}>These are the projects that I have completed</p>

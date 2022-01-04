@@ -4,7 +4,7 @@ import styles from "../styles/components/carousel/carousel.module.css";
 import CarouselCard from './CarouselCard';
 
 const Carousel = () => {
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false, startIndex: 2 })
+    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, startIndex: 2, skipSnaps: true})
     
     // const scrollPrev = useCallback(() => {
     //     if (emblaApi) emblaApi.scrollPrev()
