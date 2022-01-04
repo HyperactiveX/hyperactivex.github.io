@@ -6,15 +6,16 @@
 	flex-direction: column;
 	align-items: center;
 }
+
 .landingContainer {
 	display: flex;
 	width: 100%;
 	height: 50%;
-	background-image: radial-gradient(
+	/* background-image: radial-gradient(
 		top,
 		rgba(44, 154, 128, 1) -120%,
 		rgb(1, 14, 17) 35%
-	);
+	); */
 }
 .pictureContainer,
 .descriptionContainer,
@@ -185,6 +186,7 @@
 		display: flex;
 	}
 	.pictureContainer {
+		width: fit-content;
 		height: fit-content;
 	}
 	.descriptionContainer {
@@ -230,6 +232,9 @@
 	.descriptionContainer {
 		top: 20%;
 		align-items: center;
+	}
+	.pictureContainer {
+		width: 90vw;
 	}
 }
 @media only screen and (max-width: 375px) {
