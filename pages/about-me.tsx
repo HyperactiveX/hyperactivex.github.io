@@ -5,7 +5,7 @@ import styles from "../styles/pages/AboutMe.module.css"
 const AboutMe = () => {
   return (
     <Fragment>
-      <Layout title="Tortoei">
+      <Layout title="About me | Tortoei">
         <div className={styles.content}>
           <div className={styles.comingSoon}>Coming Soon</div>
           {/* <div className={styles.imageBox}>

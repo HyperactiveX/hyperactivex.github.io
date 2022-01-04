@@ -5,7 +5,7 @@ import styles from "../styles/pages/Projects.module.css"
 const Projects = () => {
   return (
     <Fragment>
-      <Layout title="Tortoei">
+      <Layout title="Projects | Tortoei">
         <div className={styles.content}>
             <div className={styles.comingSoon}>Coming Soon</div>
         </div>
