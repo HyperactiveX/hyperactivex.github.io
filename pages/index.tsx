@@ -6,7 +6,7 @@ import { Fragment } from 'react';
 const Home = () => {
   return (
     <Fragment>
-      <Layout title="Tortoei">
+      <Layout title="Homepage | Tortoei">
         <div className={styles.content}>
           <div className={styles.section}>
               <HomeContent />
