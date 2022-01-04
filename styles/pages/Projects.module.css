@@ -1,12 +1,116 @@
 .content {
 	width: 100%;
-	min-height: var(--screenHeight);
+	min-height: 850px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+}
+.upperLayer,
+.lowerLayer {
+	display: inherit;
+	align-items: center;
 }
 
-.comingSoon {
-	font-style: italic;
+.upperLayer {
+	min-height: 61.77%;
+	width: 90vw;
+	margin-top: 6rem;
+}
+
+.laptop {
+	height: 100%;
+	width: 50vw;
+	object-fit: contain;
+}
+
+.laptopContainer {
+	height: 100%;
+	object-fit: contain;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.titleText,
+.descriptionText {
+	color: white;
+}
+
+.titleText {
+	font-family: var(--inter);
+	font-weight: bold;
+	font-size: 3rem;
+	margin-bottom: 1.5rem;
+}
+
+.descriptionText {
+	margin: 0;
+}
+
+.lowerLayer {
+	min-height: 38.22%;
+	width: 70%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+	margin-bottom: 4rem;
+}
+.projectCardsContainer {
+	width: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+	.upperLayer {
+		width: 100vw;
+	}
+	.laptopContainer {
+		width: 50vw;
+		justify-content: center;
+	}
+	.descriptionContainer {
+		padding-right: 1rem;
+		margin-bottom: 4rem;
+	}
+	.titleText {
+		font-size: 1.5rem;
+	}
+
+	.descriptionText {
+		font-size: 1rem;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.laptopContainer {
+		width: 70vw;
+	}
+	.upperLayer {
+		flex-direction: column;
+	}
+	.lowerLayer {
+		width: 90%;
+	}
+	.descriptionContainer {
+		padding-right: 0;
+	}
+	.titleText,
+	.descriptionText {
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 425px) {
+	.descriptionContainer {
+		padding: 0 2rem;
+	}
+	.laptop {
+		height: 55vh;
+		width: 100vw;
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	.laptop {
+		height: 50vh;
+	}
 }

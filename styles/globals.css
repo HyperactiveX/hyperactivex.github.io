@@ -9,7 +9,7 @@
 	--greyFontColor: #a9a9a9;
 	--blackFontColor: #010e11;
 	--backgroundPrimary: #010e11;
-	--screenHeight: calc(100vh - 128px);
+	--screenHeight: calc(100vh - 64px);
 	--gradientGreen: linear-gradient(
 		90deg,
 		rgba(84, 210, 89, 1) 0%,
@@ -35,11 +35,10 @@ html,
 body {
 	padding: 0;
 	margin: 0;
-	font-family: "Montserrat", sans-serif;
+	font-family: var(--montserrat);
 	font-weight: 300;
 	letter-spacing: 2px;
 	color: var(--greyFontColor);
-	background-color: var(--backgroundPrimary);
 	scroll-behavior: smooth;
 }
 

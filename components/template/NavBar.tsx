@@ -78,8 +78,8 @@ const NavBar = (props:any) => {
     <Fragment>
     <div className={styles.navContainer}>
       <div className={styles.logoContainer}>
-        <Link href="#home">
-          <a href="#home">
+        <Link href="/">
+          <a href="/">
             <h2 className={`${styles.title} ${styles.navItems}`}>
               TORTOEI.
             </h2>
@@ -102,6 +102,7 @@ const NavBar = (props:any) => {
             src={element.image}
             height={20}
             width={20}
+            alt={element.alt}
           />
           </a>
         })}
@@ -111,6 +112,7 @@ const NavBar = (props:any) => {
           src="/images/navBar/hamburger.svg" 
           height={32} 
           width={32} 
+          alt="menu logo"
           onClick={() => openSideNav(!isActive)}/>
       </div>
     </div>
@@ -129,6 +131,7 @@ const NavBar = (props:any) => {
             src={element.image}
             height={20}
             width={20}
+            alt={element.alt}
           />
           </a>
         })}

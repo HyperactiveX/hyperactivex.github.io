@@ -1,12 +1,13 @@
 .footerContainer {
-    height: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	height: 4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--backgroundPrimary);
 }
 
 .footerContents {
-    height: fit-content;
-    font-size: 0.75rem;
-    text-align: center;
+	height: fit-content;
+	font-size: 0.75rem;
+	text-align: center;
 }

@@ -4,11 +4,22 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	/* background-image: radial-gradient(
+	background-color: var(--backgroundPrimary);
+}
+
+.content::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 40%;
+	left: 0;
+	right: 0;
+	background-image: radial-gradient(
 		top,
-		rgba(44, 154, 128, 1) -150%,
-		rgb(0, 0, 0) 35%
-	); */
+		rgb(28, 85, 57) -90%,
+		rgb(1, 14, 17) 70%
+	);
+	z-index: -1;
 }
 
 .content {
@@ -17,4 +28,5 @@
 	min-height: 100%;
 	overflow: auto;
 	border: none;
+	z-index: 0;
 }

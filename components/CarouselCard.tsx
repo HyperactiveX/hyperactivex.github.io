@@ -12,7 +12,7 @@ const CarouselCard = ({image, projectName, description}:CarouselProps) => {
         <div className={styles.card}>
             <div className={styles.container}>
                 <div className={styles.picture}>
-                    <img className={styles.image} src={image}/>
+                    <img className={styles.image} src={image} alt="project picture"/>
                 </div>
                 <div className={styles.description}>
                     <div className={styles.projectName}>{projectName}</div>
