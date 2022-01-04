@@ -1,0 +1,38 @@
+.cardContianer {
+	width: 100%;
+	min-height: 5.25rem;
+	padding: 1rem;
+	display: flex;
+	justify-content: space-evenly;
+}
+.projectName,
+.projectDescription {
+	margin: 0;
+	font-size: 0.875rem;
+}
+
+.projectName {
+	margin-bottom: 0.5rem;
+	color: white;
+}
+.description {
+	width: 80%;
+}
+
+.rightIcon,
+.typeIcon {
+	display: flex;
+	align-items: center;
+}
+
+@media only screen and (max-width: 425px) {
+	.description {
+		width: 70%;
+	}
+	.cardContianer {
+		padding: 1rem 0;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+}
