@@ -78,8 +78,8 @@ const NavBar = (props:any) => {
     <Fragment>
     <div className={styles.navContainer}>
       <div className={styles.logoContainer}>
-        <Link href="#home">
-          <a href="#home">
+        <Link href="/">
+          <a href="/">
             <h2 className={`${styles.title} ${styles.navItems}`}>
               TORTOEI.
             </h2>
