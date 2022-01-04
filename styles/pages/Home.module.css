@@ -21,8 +21,11 @@
 .personVector {
 	height: 100%;
 }
+.pictureContainer {
+	width: 55%;
+}
 .personVector {
-	width: 110%;
+	width: 120%;
 	object-fit: contain;
 }
 
