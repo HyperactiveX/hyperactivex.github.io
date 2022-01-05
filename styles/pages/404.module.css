@@ -1,0 +1,85 @@
+.content {
+	width: 100%;
+	min-height: 850px;
+	height: var(--screenHeight);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.errorContainer {
+	display: flex;
+}
+
+.errorStatus {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-left: 2rem;
+	padding: 2rem;
+	border-left: 2px solid var(--greenPrimary);
+}
+.errorCode,
+.errorStatusTitle {
+	width: fit-content;
+	text-align: center;
+	font-family: var(--incompleeta);
+	background: var(--gradientGreen);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.errorCode {
+	font-size: 8rem;
+	margin-bottom: 2rem;
+}
+
+.errorStatusTitle {
+	color: white;
+	font-size: 1.25rem;
+	margin: 1.5rem 0;
+}
+.errorStatusDescription {
+	color: white;
+	text-align: center;
+}
+
+.gif {
+	width: 100%;
+}
+
+.gifContainer {
+	width: 30vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@media only screen and (max-width: 1024px) {
+	.errorContainer {
+		flex-direction: column-reverse;
+	}
+	.errorStatus {
+		border: none;
+		margin-left: 0;
+		margin-bottom: 2rem;
+	}
+	.gifContainer {
+		width: 40vw;
+	}
+	.errorContainer {
+		align-items: center;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.gifContainer {
+		width: 60vw;
+	}
+}
+
+@media only screen and (max-width: 425px) {
+	.gifContainer {
+		width: 80vw;
+	}
+}
