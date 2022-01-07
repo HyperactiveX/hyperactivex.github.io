@@ -1,27 +1,227 @@
 .content {
 	width: 100%;
-	min-height: var(--screenHeight);
 	display: flex;
+	min-height: 850px;
+	height: fit-content;
+	margin-top: 6rem;
+	flex-direction: column;
 	align-items: center;
+}
+
+.upperLayer {
+	width: fit-content;
+	display: flex;
 	justify-content: center;
+	margin: 8rem 0;
 }
 
-.comingSoon {
-	font-style: italic;
-}
-
-.imageBox,
-.descriptionBox {
+.imageBox {
+	width: 40%;
 	display: flex;
 	justify-content: center;
 }
-.imageBox {
-	width: 38.22%;
-}
-.descriptionBox {
-	width: 61.77%;
+.profileImage {
+	width: 100%;
 }
 
-.profileImage {
-	height: 30rem;
+.descriptionBox {
+	margin-left: 3rem;
+	width: 470px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.firstname,
+.lastname {
+	font-family: var(--inter);
+	font-weight: 900;
+}
+
+.firstname {
+	font-size: 3rem;
+	background: var(--gradientGreen);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.lastname {
+	font-weight: bold;
+	font-size: 2.375rem;
+	color: white;
+}
+.description {
+	margin-top: 2rem;
+	line-height: 1.5rem;
+}
+
+.lowerLayer {
+	width: 70%;
+}
+
+.heading {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 1.75rem;
+	font-weight: 600;
+	margin-bottom: 3rem;
+}
+.heading::after {
+	content: "";
+	left: 50%;
+	right: 50%;
+	height: 2px;
+	width: 125px;
+	margin-top: 1rem;
+	background: var(--gradientGreen);
+}
+
+.heading,
+.title {
+	color: white;
+}
+
+.technologySection .listContainer,
+.educationSection .listContainer {
+	display: flex;
+	width: 100%;
+}
+
+.technologySection .listContainer {
+	justify-content: center;
+}
+.title {
+	text-align: center;
+}
+.list {
+	margin: 0 1.5rem;
+}
+.web {
+	margin-left: 0;
+}
+.others {
+	margin-right: 0;
+}
+.educationSection {
+	margin-bottom: 4rem;
+}
+.technologySection {
+	margin-bottom: 4rem;
+}
+
+.educationSection .listContainer {
+	flex-direction: column;
+	align-items: center;
+}
+
+.uniLink,
+.schoolLink {
+	color: white;
+	font-weight: 400;
+}
+
+.box {
+	width: 560px;
+}
+
+@media only screen and (max-width: 1024px) {
+	.lowerLayer {
+		width: 80%;
+	}
+	.list {
+		margin: 0 0.5rem;
+	}
+	.web {
+		margin-left: 0;
+	}
+	.others {
+		margin-right: 0;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.upperLayer {
+		width: 80%;
+		margin-top: 4rem;
+		margin-bottom: 8rem;
+		flex-direction: column;
+		align-items: center;
+	}
+	.imageBox {
+		width: 80%;
+		margin-bottom: 4rem;
+	}
+	.firstname,
+	.lastname {
+		text-align: center;
+	}
+	.descriptionBox {
+		margin: 0;
+		width: 80%;
+	}
+	.description {
+		text-align: center;
+	}
+	.technologySection .listContainer {
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	.list {
+		flex: 50%;
+		height: 200px;
+		align-items: flex-start;
+		margin: 0;
+	}
+}
+
+@media only screen and (max-width: 425px) {
+	.imageBox {
+		width: 100%;
+	}
+
+	.firstname {
+		font-size: 2.5rem;
+	}
+
+	.lastname {
+		font-size: 1.75rem;
+	}
+	.descriptionBox {
+		margin: 0;
+		width: 100%;
+	}
+	.technologySection .listContainer {
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	.list {
+		flex: 100%;
+		height: 200px;
+		align-items: flex-start;
+		margin: 0;
+	}
+	.box {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	.firstname {
+		font-size: 2rem;
+	}
+
+	.lastname {
+		font-size: 1.5rem;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	.firstname {
+		font-size: 1.75rem;
+	}
+
+	.lastname {
+		font-size: 1.25rem;
+	}
 }
