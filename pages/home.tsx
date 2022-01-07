@@ -18,7 +18,7 @@ const HomeContent = () => {
           <div className={styles.description}>
             <p className={styles.descriptionElement}>I’m a junior year student in Computer Science </p>
             <p className={styles.descriptionElement}>at King Mongkut’s University of Technology Thonburi.</p>
-            <p className={styles.descriptionElement}>I’m aspired to become a <span className={styles.highlightedCareer}>full stack developer.</span></p>
+            <p className={styles.descriptionElement}>I’m a <span className={styles.highlightedCareer}>full stack developer.</span></p>
           </div>
         </div>
         <div className={styles.explorButton}>
