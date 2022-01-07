@@ -55,6 +55,21 @@
 	justify-content: center;
 }
 
+.buttonBackHome {
+	margin-top: 2rem;
+	font-size: 1.25rem;
+	padding: 0.5rem 2rem;
+	color: var(--greenPrimary);
+	border: 1px solid var(--greenPrimary);
+	border-radius: 5px;
+	background-color: transparent;
+}
+
+.buttonBackHome:hover {
+	color: var(--backgroundPrimary);
+	background-color: var(--greenPrimary);
+}
+
 @media only screen and (max-width: 1024px) {
 	.errorContainer {
 		flex-direction: column-reverse;

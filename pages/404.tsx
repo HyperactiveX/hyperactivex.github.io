@@ -1,8 +1,15 @@
+import { useRouter } from "next/router";
 import { Fragment } from "react";
 import Layout from "../components/template/Layout";
 import styles from "../styles/pages/404.module.css"
 
 const Sandbox = () => {
+  const router = useRouter()
+
+  const redirectToHome = () => {
+    return router.push("/")
+  }
+
   return (
     <Fragment>
       <Layout title="Page Not Found | Tortoei">
@@ -17,6 +24,7 @@ const Sandbox = () => {
                     <div className={styles.errorStatusDescription}>
                         Either I broke something or you came to the wrong path...
                     </div>
+                    <button className={styles.buttonBackHome} onClick={() => redirectToHome()}>Back Home</button>
                 </div>
             </div>
         </div>

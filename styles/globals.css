@@ -31,6 +31,10 @@
 	/* #e3e2de */
 }
 
+* {
+	box-sizing: border-box;
+}
+
 html,
 body {
 	padding: 0;
@@ -47,8 +51,13 @@ a {
 	text-decoration: none;
 }
 
-* {
-	box-sizing: border-box;
+img {
+	pointer-events: none;
+}
+
+li {
+	font-weight: 300;
+	padding: 0.4rem 0;
 }
 
 /* Incompleeta */
