@@ -67,14 +67,14 @@ const AboutMe = () => {
               <div className={styles.listContainer}>
                 <ul className={styles.box}>
                   <li className={styles.uniLink}>
-                    <a href="https://www.kmutt.ac.th/">
+                    <a href="https://www.kmutt.ac.th/" target="_blank">
                       King Mongkut's University of Technology Thonburi
                     </a>
                   </li>
                 </ul>
                 <ul className={styles.box}>
                   <li className={styles.schoolLink}>
-                    <a href="https://syas.edu.sg/">
+                    <a href="https://syas.edu.sg/" target="_blank">
                       San Yu Adventist School
                     </a>
                   </li>

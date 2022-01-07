@@ -121,6 +121,12 @@
 	font-weight: 400;
 }
 
+.uniLink:hover {
+	color: #ff4713;
+}
+.schoolLink:hover {
+	color: #ffd615;
+}
 .box {
 	width: 560px;
 }
