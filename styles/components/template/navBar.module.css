@@ -76,6 +76,7 @@
 
 .hamburgerIcon {
 	cursor: pointer;
+	pointer-events: auto;
 }
 
 .sideNav {
