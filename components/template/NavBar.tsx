@@ -79,11 +79,9 @@ const NavBar = (props:any) => {
     <div className={styles.navContainer}>
       <div className={styles.logoContainer}>
         <Link href="/">
-          <a href="/">
             <h2 className={`${styles.title} ${styles.navItems}`}>
               TORTOEI.
             </h2>
-          </a>
         </Link>
       </div>
       <div className={styles.menuContainer}>
